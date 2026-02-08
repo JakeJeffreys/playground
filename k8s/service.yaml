@@ -1,0 +1,35 @@
+# Service: Provides a stable network endpoint to access a set of pods
+# Even as pods are created and destroyed, the Service IP remains constant
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: learning-k8s
+  labels:
+    app: nginx
+spec:
+  # Type of service:
+  # - ClusterIP: Only accessible within the cluster (default)
+  # - NodePort: Accessible on each node's IP at a static port
+  # - LoadBalancer: Exposes service externally using cloud provider's load balancer
+  type: NodePort
+
+  # Selector: Routes traffic to pods with these labels
+  selector:
+    app: nginx
+
+  # Ports configuration
+  ports:
+  - name: http
+    # Port the service listens on
+    port: 80
+    # Port on the pod to forward traffic to
+    targetPort: 80
+    # NodePort: External port accessible on each node (30000-32767)
+    # If not specified, Kubernetes assigns one automatically
+    nodePort: 30080
+    protocol: TCP
+
+  # SessionAffinity: Route requests from same client to same pod
+  # Options: None (default) or ClientIP
+  sessionAffinity: None

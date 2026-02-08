@@ -1,0 +1,79 @@
+# Deployment: Manages a set of identical pods, ensuring the desired number are always running
+# If a pod crashes, the Deployment automatically creates a new one
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Name of this deployment
+  name: nginx-app
+  # Deploy into our learning namespace
+  namespace: learning-k8s
+  labels:
+    app: nginx
+spec:
+  # Number of pod replicas to run - Kubernetes will maintain this count
+  replicas: 3
+
+  # Selector: How the Deployment finds which pods to manage
+  selector:
+    matchLabels:
+      app: nginx
+
+  # Template: Blueprint for creating pods
+  template:
+    metadata:
+      # Labels applied to each pod created from this template
+      labels:
+        app: nginx
+        version: v1
+    spec:
+      # Containers that run in each pod
+      containers:
+      - name: nginx
+        # Docker image to use - nginx is a popular web server
+        image: nginx:1.25-alpine
+
+        # Ports that the container exposes
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+
+        # Environment variables injected into the container
+        env:
+        - name: ENVIRONMENT
+          value: "development"
+        # This env var pulls from our ConfigMap (defined separately)
+        - name: APP_MESSAGE
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: message
+
+        # Resource limits prevent a single pod from consuming too many resources
+        resources:
+          # Limits: Maximum resources the container can use
+          limits:
+            cpu: "200m"      # 200 millicores (0.2 CPU cores)
+            memory: "128Mi"  # 128 Mebibytes of RAM
+          # Requests: Resources guaranteed to the container
+          requests:
+            cpu: "100m"      # 100 millicores
+            memory: "64Mi"   # 64 Mebibytes of RAM
+
+        # Liveness probe: Checks if the container is running
+        # If this fails, Kubernetes will restart the container
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10  # Wait 10s after container starts
+          periodSeconds: 10         # Check every 10s
+
+        # Readiness probe: Checks if the container is ready to serve traffic
+        # If this fails, the pod is removed from service endpoints
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5

@@ -1,0 +1,11 @@
+# Namespace: A way to organize and isolate resources in a Kubernetes cluster
+# Think of it as a virtual cluster within your physical cluster
+apiVersion: v1
+kind: Namespace
+metadata:
+  # The name of our namespace - we'll deploy all our resources here
+  name: learning-k8s
+  labels:
+    # Labels help organize and select resources
+    environment: development
+    purpose: learning
