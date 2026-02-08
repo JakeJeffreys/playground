@@ -2,6 +2,23 @@
 
 A detailed week-by-week study schedule for the AWS Certified Solutions Architect - Associate exam.
 
+## TLDR - Study Plan Overview
+
+| Week | Focus Areas | Key Services | Hours |
+|------|-------------|--------------|-------|
+| **1** | Fundamentals & Compute | EC2, Auto Scaling, ALB/NLB | 15-18 |
+| **2** | VPC & Networking | VPC, Direct Connect, Route 53, CloudFront | 18-20 |
+| **3** | Storage Solutions | S3, EBS, EFS, Storage Gateway, FSx | 18-20 |
+| **4** | Databases & Caching | RDS, Aurora, DynamoDB, ElastiCache, Redshift | 18-20 |
+| **5** | Security & Identity | IAM, KMS, Secrets Manager, WAF, GuardDuty, Config, CloudTrail | 18-20 |
+| **6** | High Availability & DR | Multi-AZ, DR strategies, CloudWatch, Cost Optimization | 18-20 |
+| **7** | Integration & Migration + Practice Exam #1 | SQS, SNS, DMS, ECS + Review | 18-20 |
+| **8** | Final Review & Practice Exams #2-3 | Architecture patterns + Exam prep | 15-20 |
+
+**Total**: 140+ hours over 8 weeks
+
+---
+
 ## Week 1: Fundamentals & Compute
 
 ### Learning Objectives
@@ -12,32 +29,31 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 ### Daily Breakdown
 
 **Day 1-2: AWS Fundamentals**
-- [ ] Read: AWS Global Infrastructure (Regions, AZs, Edge Locations)
-- [ ] Watch: Course introduction and AWS fundamentals
-- [ ] Learn: Well-Architected Framework overview
-- [ ] Hands-on: Create AWS account, enable MFA, set up billing alerts
-- [ ] Hands-on: Create IAM user with appropriate permissions
+- [ ] AWS Global Infrastructure (Regions, AZs, Edge Locations)
+- [ ] Well-Architected Framework overview
+- [ ] Create AWS account, enable MFA, set up billing alerts
+- [ ] Create IAM user with appropriate permissions
 
 **Day 3-5: EC2 Deep Dive**
-- [ ] Read: EC2 instance types and families (C5, M5, R5, T3, etc.)
-- [ ] Learn: Pricing models (On-Demand, Reserved, Spot, Savings Plans)
-- [ ] Learn: Security groups, key pairs, user data, metadata
-- [ ] Learn: Placement groups (Cluster, Spread, Partition)
-- [ ] Hands-on: Launch EC2 instances in different AZs
-- [ ] Hands-on: Create and configure security groups
-- [ ] Hands-on: Use EC2 user data for bootstrapping
-- [ ] Hands-on: Create AMI from running instance
-- [ ] Hands-on: Test placement groups
+- [ ] EC2 instance types and families (C5, M5, R5, T3, etc.)
+- [ ] Pricing models (On-Demand, Reserved, Spot, Savings Plans)
+- [ ] Security groups, key pairs, user data, metadata
+- [ ] Placement groups (Cluster, Spread, Partition)
+- [ ] Launch EC2 instances in different AZs
+- [ ] Create and configure security groups
+- [ ] Use EC2 user data for bootstrapping
+- [ ] Create AMI from running instance
+- [ ] Test placement groups
 
 **Day 6-7: Auto Scaling & Load Balancing**
-- [ ] Read: Auto Scaling groups and policies
-- [ ] Learn: Launch templates vs launch configurations
-- [ ] Learn: Application Load Balancer (ALB) vs Network Load Balancer (NLB)
-- [ ] Learn: Health checks and target groups
-- [ ] Hands-on: Create Auto Scaling group across multiple AZs
-- [ ] Hands-on: Configure ALB with target groups
-- [ ] Hands-on: Implement scaling policies (target tracking, step, scheduled)
-- [ ] Practice: EC2 and load balancing quiz questions
+- [ ] Auto Scaling groups and policies
+- [ ] Launch templates vs launch configurations
+- [ ] Application Load Balancer (ALB) vs Network Load Balancer (NLB)
+- [ ] Health checks and target groups
+- [ ] Create Auto Scaling group across multiple AZs
+- [ ] Configure ALB with target groups
+- [ ] Implement scaling policies (target tracking, step, scheduled)
+- [ ] EC2 and load balancing practice questions
 
 ### Study Time: 15-18 hours
 
@@ -53,37 +69,37 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 ### Daily Breakdown
 
 **Day 1-4: VPC Deep Dive (CRITICAL)**
-- [ ] Read: VPC fundamentals (CIDR, subnets, route tables)
-- [ ] Learn: Internet Gateway vs NAT Gateway vs NAT Instance
-- [ ] Learn: Security Groups vs Network ACLs
-- [ ] Learn: VPC Peering vs Transit Gateway
-- [ ] Learn: VPC Endpoints (Gateway and Interface)
-- [ ] Learn: VPC Flow Logs
-- [ ] Hands-on: Create custom VPC with public and private subnets
-- [ ] Hands-on: Configure route tables and Internet Gateway
-- [ ] Hands-on: Set up NAT Gateway for private subnet internet access
-- [ ] Hands-on: Create VPC Peering connection
-- [ ] Hands-on: Configure Security Groups and NACLs
-- [ ] Hands-on: Set up VPC Endpoint for S3
-- [ ] Practice: VPC networking scenarios (do 50+ questions)
+- [ ] VPC fundamentals (CIDR, subnets, route tables)
+- [ ] Internet Gateway vs NAT Gateway vs NAT Instance
+- [ ] Security Groups vs Network ACLs
+- [ ] VPC Peering vs Transit Gateway
+- [ ] VPC Endpoints (Gateway and Interface)
+- [ ] VPC Flow Logs
+- [ ] Create custom VPC with public and private subnets
+- [ ] Configure route tables and Internet Gateway
+- [ ] Set up NAT Gateway for private subnet internet access
+- [ ] Create VPC Peering connection
+- [ ] Configure Security Groups and NACLs
+- [ ] Set up VPC Endpoint for S3
+- [ ] VPC networking practice scenarios (50+ questions)
 
 **Day 5: Hybrid Connectivity**
-- [ ] Read: Site-to-Site VPN
-- [ ] Learn: Direct Connect and Direct Connect Gateway
-- [ ] Learn: Transit Gateway for multi-VPC connectivity
-- [ ] Hands-on: Configure Site-to-Site VPN (simulated)
-- [ ] Learn: Use cases for each connectivity option
+- [ ] Site-to-Site VPN
+- [ ] Direct Connect and Direct Connect Gateway
+- [ ] Transit Gateway for multi-VPC connectivity
+- [ ] Configure Site-to-Site VPN (simulated)
+- [ ] Use cases for each connectivity option
 
 **Day 6-7: Route 53 & CloudFront**
-- [ ] Read: Route 53 routing policies
-- [ ] Learn: Health checks and failover
-- [ ] Learn: CloudFront distributions and origins
-- [ ] Learn: Edge locations and caching strategies
-- [ ] Hands-on: Create Route 53 hosted zone
-- [ ] Hands-on: Configure different routing policies
-- [ ] Hands-on: Set up CloudFront distribution with S3 origin
-- [ ] Hands-on: Configure cache behaviors and TTL
-- [ ] Practice: Networking and CDN quiz questions
+- [ ] Route 53 routing policies
+- [ ] Health checks and failover
+- [ ] CloudFront distributions and origins
+- [ ] Edge locations and caching strategies
+- [ ] Create Route 53 hosted zone
+- [ ] Configure different routing policies
+- [ ] Set up CloudFront distribution with S3 origin
+- [ ] Configure cache behaviors and TTL
+- [ ] Networking and CDN practice questions
 
 ### Study Time: 18-20 hours
 
@@ -99,38 +115,38 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 ### Daily Breakdown
 
 **Day 1-4: S3 Deep Dive (CRITICAL)**
-- [ ] Read: S3 storage classes and use cases
-- [ ] Learn: Bucket policies, ACLs, and access control
-- [ ] Learn: Versioning, MFA Delete, Object Lock
-- [ ] Learn: S3 Replication (CRR and SRR)
-- [ ] Learn: Lifecycle policies and transitions
-- [ ] Learn: S3 encryption options (SSE-S3, SSE-KMS, SSE-C)
-- [ ] Learn: S3 performance optimization (multipart, transfer acceleration)
-- [ ] Hands-on: Create buckets with different storage classes
-- [ ] Hands-on: Configure bucket policies and encryption
-- [ ] Hands-on: Enable versioning and MFA Delete
-- [ ] Hands-on: Set up lifecycle policies
-- [ ] Hands-on: Configure Cross-Region Replication
-- [ ] Hands-on: Host static website on S3 + CloudFront
-- [ ] Practice: S3 quiz questions (do 50+)
+- [ ] S3 storage classes and use cases
+- [ ] Bucket policies, ACLs, and access control
+- [ ] Versioning, MFA Delete, Object Lock
+- [ ] S3 Replication (CRR and SRR)
+- [ ] Lifecycle policies and transitions
+- [ ] S3 encryption options (SSE-S3, SSE-KMS, SSE-C)
+- [ ] S3 performance optimization (multipart, transfer acceleration)
+- [ ] Create buckets with different storage classes
+- [ ] Configure bucket policies and encryption
+- [ ] Enable versioning and MFA Delete
+- [ ] Set up lifecycle policies
+- [ ] Configure Cross-Region Replication
+- [ ] Host static website on S3 + CloudFront
+- [ ] S3 practice questions (50+)
 
 **Day 5-6: EBS & EFS**
-- [ ] Read: EBS volume types (gp3, io2, st1, sc1)
-- [ ] Learn: EBS snapshots and lifecycle
-- [ ] Learn: EBS encryption and performance
-- [ ] Learn: EFS performance and throughput modes
-- [ ] Learn: EFS storage classes (Standard, IA)
-- [ ] Hands-on: Create and attach EBS volumes
-- [ ] Hands-on: Create EBS snapshots and AMIs
-- [ ] Hands-on: Set up EFS with multiple mount targets
-- [ ] Hands-on: Test EFS across multiple EC2 instances
+- [ ] EBS volume types (gp3, io2, st1, sc1)
+- [ ] EBS snapshots and lifecycle
+- [ ] EBS encryption and performance
+- [ ] EFS performance and throughput modes
+- [ ] EFS storage classes (Standard, IA)
+- [ ] Create and attach EBS volumes
+- [ ] Create EBS snapshots and AMIs
+- [ ] Set up EFS with multiple mount targets
+- [ ] Test EFS across multiple EC2 instances
 
 **Day 7: Other Storage Services**
-- [ ] Read: Storage Gateway (File, Volume, Tape)
-- [ ] Learn: FSx for Windows and FSx for Lustre
-- [ ] Learn: AWS Backup service
-- [ ] Learn: When to use each storage service
-- [ ] Practice: Storage selection quiz questions
+- [ ] Storage Gateway (File, Volume, Tape)
+- [ ] FSx for Windows and FSx for Lustre
+- [ ] AWS Backup service
+- [ ] When to use each storage service
+- [ ] Storage selection practice questions
 
 ### Study Time: 18-20 hours
 
@@ -146,42 +162,42 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 ### Daily Breakdown
 
 **Day 1-3: RDS & Aurora**
-- [ ] Read: RDS database engines and features
-- [ ] Learn: Multi-AZ vs Read Replicas (CRITICAL)
-- [ ] Learn: Automated backups vs manual snapshots
-- [ ] Learn: RDS parameter groups and option groups
-- [ ] Learn: Aurora architecture and features
-- [ ] Learn: Aurora Serverless and Global Database
-- [ ] Hands-on: Launch RDS instance with Multi-AZ
-- [ ] Hands-on: Create Read Replicas
-- [ ] Hands-on: Test automated backups and snapshots
-- [ ] Hands-on: Deploy Aurora cluster
-- [ ] Hands-on: Promote Read Replica to standalone
-- [ ] Practice: RDS high availability scenarios
+- [ ] RDS database engines and features
+- [ ] Multi-AZ vs Read Replicas (CRITICAL)
+- [ ] Automated backups vs manual snapshots
+- [ ] RDS parameter groups and option groups
+- [ ] Aurora architecture and features
+- [ ] Aurora Serverless and Global Database
+- [ ] Launch RDS instance with Multi-AZ
+- [ ] Create Read Replicas
+- [ ] Test automated backups and snapshots
+- [ ] Deploy Aurora cluster
+- [ ] Promote Read Replica to standalone
+- [ ] RDS high availability practice scenarios
 
 **Day 4-5: NoSQL & Other Databases**
-- [ ] Read: DynamoDB architecture and use cases
-- [ ] Learn: DynamoDB capacity modes and global tables
-- [ ] Learn: DynamoDB Accelerator (DAX)
-- [ ] Learn: DocumentDB, Neptune, QLDB, Timestream
-- [ ] Learn: When to use SQL vs NoSQL
-- [ ] Hands-on: Create DynamoDB table with indexes
-- [ ] Hands-on: Test DynamoDB global tables
-- [ ] Practice: Database selection scenarios
+- [ ] DynamoDB architecture and use cases
+- [ ] DynamoDB capacity modes and global tables
+- [ ] DynamoDB Accelerator (DAX)
+- [ ] DocumentDB, Neptune, QLDB, Timestream
+- [ ] When to use SQL vs NoSQL
+- [ ] Create DynamoDB table with indexes
+- [ ] Test DynamoDB global tables
+- [ ] Database selection practice scenarios
 
 **Day 6: ElastiCache**
-- [ ] Read: ElastiCache for Redis vs Memcached
-- [ ] Learn: Caching strategies (lazy loading, write-through)
-- [ ] Learn: Use cases (session store, database cache)
-- [ ] Hands-on: Deploy ElastiCache cluster
-- [ ] Practice: Caching architecture questions
+- [ ] ElastiCache for Redis vs Memcached
+- [ ] Caching strategies (lazy loading, write-through)
+- [ ] Use cases (session store, database cache)
+- [ ] Deploy ElastiCache cluster
+- [ ] Caching architecture practice questions
 
 **Day 7: Data Warehouse & Analytics**
-- [ ] Read: Redshift architecture
-- [ ] Learn: Redshift Spectrum
-- [ ] Learn: Athena for querying S3
-- [ ] Learn: When to use data warehouse vs database
-- [ ] Practice: Database and analytics quiz questions
+- [ ] Redshift architecture
+- [ ] Redshift Spectrum
+- [ ] Athena for querying S3
+- [ ] When to use data warehouse vs database
+- [ ] Database and analytics practice questions
 
 ### Study Time: 18-20 hours
 
@@ -197,41 +213,41 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 ### Daily Breakdown
 
 **Day 1-3: IAM Deep Dive (CRITICAL)**
-- [ ] Read: IAM users, groups, roles, and policies
-- [ ] Learn: Policy types (managed, inline, resource-based)
-- [ ] Learn: IAM policy evaluation logic
-- [ ] Learn: Cross-account access patterns
-- [ ] Learn: Permission boundaries and SCPs
-- [ ] Learn: STS and temporary credentials
-- [ ] Hands-on: Create custom IAM policies
-- [ ] Hands-on: Configure cross-account role assumption
-- [ ] Hands-on: Implement permission boundaries
-- [ ] Hands-on: Use IAM Access Analyzer
-- [ ] Practice: IAM policy troubleshooting (do 50+ questions)
+- [ ] IAM users, groups, roles, and policies
+- [ ] Policy types (managed, inline, resource-based)
+- [ ] IAM policy evaluation logic
+- [ ] Cross-account access patterns
+- [ ] Permission boundaries and SCPs
+- [ ] STS and temporary credentials
+- [ ] Create custom IAM policies
+- [ ] Configure cross-account role assumption
+- [ ] Implement permission boundaries
+- [ ] Use IAM Access Analyzer
+- [ ] IAM policy troubleshooting (50+ questions)
 
 **Day 4-5: Encryption & Key Management**
-- [ ] Read: KMS concepts and key types
-- [ ] Learn: Envelope encryption
-- [ ] Learn: S3 encryption methods
-- [ ] Learn: EBS and RDS encryption
-- [ ] Learn: Secrets Manager vs Parameter Store
-- [ ] Hands-on: Create KMS keys and key policies
-- [ ] Hands-on: Encrypt S3 buckets with KMS
-- [ ] Hands-on: Store secrets in Secrets Manager
-- [ ] Hands-on: Use Parameter Store for configuration
+- [ ] KMS concepts and key types
+- [ ] Envelope encryption
+- [ ] S3 encryption methods
+- [ ] EBS and RDS encryption
+- [ ] Secrets Manager vs Parameter Store
+- [ ] Create KMS keys and key policies
+- [ ] Encrypt S3 buckets with KMS
+- [ ] Store secrets in Secrets Manager
+- [ ] Use Parameter Store for configuration
 
 **Day 6-7: Security Services**
-- [ ] Read: AWS Certificate Manager (ACM)
-- [ ] Learn: WAF rules and conditions
-- [ ] Learn: Shield Standard vs Advanced
-- [ ] Learn: GuardDuty, Inspector, Macie
-- [ ] Learn: AWS Config for compliance
-- [ ] Learn: CloudTrail for auditing
-- [ ] Hands-on: Configure WAF rules
-- [ ] Hands-on: Enable GuardDuty
-- [ ] Hands-on: Set up Config rules
-- [ ] Hands-on: Create CloudTrail organization trail
-- [ ] Practice: Security and compliance quiz questions
+- [ ] AWS Certificate Manager (ACM)
+- [ ] WAF rules and conditions
+- [ ] Shield Standard vs Advanced
+- [ ] GuardDuty, Inspector, Macie
+- [ ] AWS Config for compliance
+- [ ] CloudTrail for auditing
+- [ ] Configure WAF rules
+- [ ] Enable GuardDuty
+- [ ] Set up Config rules
+- [ ] Create CloudTrail organization trail
+- [ ] Security and compliance practice questions
 
 ### Study Time: 18-20 hours
 
@@ -247,43 +263,43 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 ### Daily Breakdown
 
 **Day 1-2: High Availability Patterns**
-- [ ] Read: Multi-AZ deployment patterns
-- [ ] Learn: Active-Active vs Active-Passive
-- [ ] Learn: Health checks and failover
-- [ ] Learn: Designing for fault tolerance
-- [ ] Hands-on: Build highly available web application
-- [ ] Hands-on: Configure Route 53 failover routing
-- [ ] Practice: High availability scenarios
+- [ ] Multi-AZ deployment patterns
+- [ ] Active-Active vs Active-Passive
+- [ ] Health checks and failover
+- [ ] Designing for fault tolerance
+- [ ] Build highly available web application
+- [ ] Configure Route 53 failover routing
+- [ ] High availability practice scenarios
 
 **Day 3-4: Disaster Recovery**
-- [ ] Read: DR strategies (Backup & Restore, Pilot Light, Warm Standby, Multi-Site)
-- [ ] Learn: RTO vs RPO requirements
-- [ ] Learn: Cross-region replication strategies
-- [ ] Learn: Aurora Global Database for DR
-- [ ] Learn: DynamoDB global tables
-- [ ] Hands-on: Implement pilot light DR architecture
-- [ ] Hands-on: Configure cross-region backup
-- [ ] Practice: DR and business continuity scenarios
+- [ ] DR strategies (Backup & Restore, Pilot Light, Warm Standby, Multi-Site)
+- [ ] RTO vs RPO requirements
+- [ ] Cross-region replication strategies
+- [ ] Aurora Global Database for DR
+- [ ] DynamoDB global tables
+- [ ] Implement pilot light DR architecture
+- [ ] Configure cross-region backup
+- [ ] DR and business continuity practice scenarios
 
 **Day 5-6: Monitoring & Logging**
-- [ ] Read: CloudWatch metrics, alarms, and dashboards
-- [ ] Learn: CloudWatch Logs and Insights
-- [ ] Learn: EventBridge (CloudWatch Events)
-- [ ] Learn: CloudTrail vs Config vs CloudWatch
-- [ ] Learn: AWS Systems Manager
-- [ ] Hands-on: Create custom CloudWatch metrics
-- [ ] Hands-on: Set up CloudWatch alarms and dashboards
-- [ ] Hands-on: Create EventBridge rules
-- [ ] Hands-on: Analyze logs with CloudWatch Insights
+- [ ] CloudWatch metrics, alarms, and dashboards
+- [ ] CloudWatch Logs and Insights
+- [ ] EventBridge (CloudWatch Events)
+- [ ] CloudTrail vs Config vs CloudWatch
+- [ ] AWS Systems Manager
+- [ ] Create custom CloudWatch metrics
+- [ ] Set up CloudWatch alarms and dashboards
+- [ ] Create EventBridge rules
+- [ ] Analyze logs with CloudWatch Insights
 
 **Day 7: Cost Optimization**
-- [ ] Read: Cost optimization strategies
-- [ ] Learn: AWS Cost Explorer and Budgets
-- [ ] Learn: Trusted Advisor recommendations
-- [ ] Learn: Right-sizing and reserved capacity
-- [ ] Hands-on: Set up cost allocation tags
-- [ ] Hands-on: Create budget alerts
-- [ ] Practice: Cost optimization scenarios
+- [ ] Cost optimization strategies
+- [ ] AWS Cost Explorer and Budgets
+- [ ] Trusted Advisor recommendations
+- [ ] Right-sizing and reserved capacity
+- [ ] Set up cost allocation tags
+- [ ] Create budget alerts
+- [ ] Cost optimization practice scenarios
 
 ### Study Time: 18-20 hours
 
@@ -299,31 +315,31 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 ### Daily Breakdown
 
 **Day 1-2: Messaging Services**
-- [ ] Read: SQS (Standard vs FIFO)
-- [ ] Learn: SNS topics and subscriptions
-- [ ] Learn: EventBridge for event routing
-- [ ] Learn: Step Functions for orchestration
-- [ ] Learn: Decoupling architectures
-- [ ] Hands-on: Create SQS queue with DLQ
-- [ ] Hands-on: Implement SNS fan-out pattern
-- [ ] Hands-on: Configure EventBridge rules
-- [ ] Practice: Integration patterns quiz
+- [ ] SQS (Standard vs FIFO)
+- [ ] SNS topics and subscriptions
+- [ ] EventBridge for event routing
+- [ ] Step Functions for orchestration
+- [ ] Decoupling architectures
+- [ ] Create SQS queue with DLQ
+- [ ] Implement SNS fan-out pattern
+- [ ] Configure EventBridge rules
+- [ ] Integration patterns practice questions
 
 **Day 3: Migration & Transfer**
-- [ ] Read: Database Migration Service (DMS)
-- [ ] Learn: Server Migration Service (SMS)
-- [ ] Learn: DataSync and Snow Family
-- [ ] Learn: 6 R's of migration (Rehost, Replatform, etc.)
-- [ ] Learn: Migration Hub
-- [ ] Practice: Migration strategy scenarios
+- [ ] Database Migration Service (DMS)
+- [ ] Server Migration Service (SMS)
+- [ ] DataSync and Snow Family
+- [ ] 6 R's of migration (Rehost, Replatform, etc.)
+- [ ] Migration Hub
+- [ ] Migration strategy practice scenarios
 
 **Day 4: Containers & Serverless**
-- [ ] Read: ECS vs EKS
-- [ ] Learn: Fargate vs EC2 launch types
-- [ ] Learn: Lambda use cases and best practices
-- [ ] Learn: API Gateway integration
-- [ ] Hands-on: Deploy container to ECS Fargate
-- [ ] Hands-on: Create Lambda function with API Gateway
+- [ ] ECS vs EKS
+- [ ] Fargate vs EC2 launch types
+- [ ] Lambda use cases and best practices
+- [ ] API Gateway integration
+- [ ] Deploy container to ECS Fargate
+- [ ] Create Lambda function with API Gateway
 
 **Day 5: First Practice Exam**
 - [ ] Take full-length practice exam (130 min)
@@ -334,8 +350,8 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 **Day 6-7: Targeted Review**
 - [ ] Review all incorrect answers thoroughly
 - [ ] Re-study weak domains identified
-- [ ] Hands-on labs for problem areas
-- [ ] Read relevant service FAQs
+- [ ] Labs for problem areas
+- [ ] Study relevant service FAQs
 - [ ] Review Well-Architected Framework for weak areas
 
 ### Study Time: 18-20 hours
@@ -375,9 +391,9 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 
 **Day 4: Deep Dive on Weak Areas**
 - [ ] Focus on domains with lowest practice scores
-- [ ] Hands-on labs for problem topics
-- [ ] Re-read service FAQs for weak services
-- [ ] Watch recap videos
+- [ ] Labs for problem topics
+- [ ] Study service FAQs for weak services
+- [ ] Review videos/content for weak areas
 - [ ] Review Well-Architected Framework pillars
 
 **Day 5: Third Practice Exam**
@@ -390,7 +406,7 @@ A detailed week-by-week study schedule for the AWS Certified Solutions Architect
 - [ ] Quick review of all services
 - [ ] Review exam strategies and keywords
 - [ ] Review cheat sheets and notes
-- [ ] Light hands-on practice
+- [ ] Light practice
 - [ ] Mentally prepare
 - [ ] Get good sleep!
 
@@ -413,10 +429,9 @@ Use this for each week:
 Week #: ___
 Focus: _______________
 
-[ ] Completed all video lectures
-[ ] Read all assigned documentation
-[ ] Read relevant service FAQs
-[ ] Completed all hands-on labs
+[ ] Studied all core topics
+[ ] Studied relevant documentation and FAQs
+[ ] Completed labs
 [ ] Took weekly practice questions (score: ___%)
 [ ] Reviewed and understood mistakes
 [ ] Created architecture diagrams
@@ -441,8 +456,8 @@ Total study hours: ___ / 18 target
 
 **Weekday Schedule** (2-3 hours/day):
 1. **Warm-up (10 min)**: Review yesterday's notes
-2. **Learn (60-90 min)**: Watch videos, read documentation, FAQs
-3. **Practice (60-90 min)**: Hands-on labs and architecture design
+2. **Learn (60-90 min)**: Study core concepts and service features
+3. **Practice (60-90 min)**: Labs and architecture design
 4. **Review (20 min)**: Take notes, create diagrams, flashcards
 
 **Weekend Schedule** (4-6 hours/day):
